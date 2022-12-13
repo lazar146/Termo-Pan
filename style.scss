@@ -1,0 +1,445 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+//BOJE
+$tamnosiva: rgb(25,25,25);
+$svetlozlena: rgb(152, 228, 90);
+$svetlosiva: rgb(88, 88, 88);
+$malosvetlijasiva: rgb(124, 124, 124);
+
+//MIXINI
+@mixin naslovi{
+    padding: 3%;
+    font-size: 40px;
+    color: $svetlozlena;
+    text-align: center;
+}
+@mixin zaskilove{
+    font-size: 17px;
+    color: $svetlozlena;
+}
+@mixin h3{
+    font-size: 30px;
+    color: $svetlozlena;
+}
+@mixin zapr{
+    padding: 1%;
+    text-align: center;
+    width: 36%;
+}
+html {
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+}    
+body::-webkit-scrollbar-thumb {
+    background-color: $svetlozlena;
+    outline: 2px; 
+    border-radius: 10px;
+    outline: 1px solid $tamnosiva;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px black;
+    background-color: $svetlosiva;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.centerblock{
+    width: 80%;
+    margin: 0px auto;
+}
+header{
+    background-color: $malosvetlijasiva;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+        #nav{
+            text-align: center;
+                ul{
+                   text-decoration: none;
+                   padding: 0.5%;
+                   li{
+                       display: inline;
+                       padding: 0% 4%;
+                        a{
+                            text-decoration: none;
+                            color: $tamnosiva;
+                            font-size: 25px;
+                            &:hover{
+                                color: $svetlozlena;
+                            }
+                        }
+
+                   }
+                }
+        }
+}
+#pozadina{
+    background-image: url(pozadina.jpg);
+    background-repeat: no-repeat;
+    height: 70%;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+        h1{
+            padding:16% 0%;
+            color: $svetlozlena;
+            position: relative;
+            animation-duration: 1s;
+            animation-name: an1;
+            @keyframes an1 {
+                0%   {top:-400px;}
+                100% {top:0px;}
+        }
+        }
+}
+#about{
+    background-color: $svetlosiva;
+    width: 100%;   
+    padding-bottom: 2%;
+      h2{
+          @include naslovi;
+          margin-left: -3%;
+      }  
+      #zablokove{
+        display: flex;
+        justify-content: space-around;
+        #slika{
+            img{
+                width: 100%;
+                margin-left: 10%;
+            }
+        }
+            hr{
+                border-color: $svetlozlena;
+                background-color: $svetlozlena;
+                width: 2px;
+                margin-left: 1.8%;
+            }
+            #tekst{
+            width: 25%;
+            padding: 3%;
+            text-align: center;
+                h3{
+                    @include h3;
+                    
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                }
+            }
+        }
+#servisi{
+    background-color: $tamnosiva;
+    width: 100%;
+    padding: 1% 0%;
+     #nasl{
+        @include naslovi;
+     }
+      #za3bloka{
+        display: flex;
+        justify-content: space-around;
+            
+            .sblok{
+            padding: 1%;
+            text-align: center;
+            width: 30%;
+            background-color: $malosvetlijasiva;
+            word-break: break-all;
+            border-radius: 10px;
+                h3{
+                  font-size: 25px;
+                  margin: 13px 0;
+                }
+                &:hover{
+                    border-radius: 15px;
+                    transform: scale(1.04);
+
+                        i{   
+                            -webkit-transition: all 0.6s ease-in-out;
+                            -moz-transition: all 0.6s ease-in-out;
+                            -o-transition: all 0.6s ease-in-out;
+                            -ms-transition: all 0.6s ease-in-out;
+                            transition: all 0.6s ease-in-out;
+                            -webkit-transform: rotate(360deg);
+                            -o-transform: rotate(360deg);
+                            -moz-transform: rotate(360deg);
+                            -ms-transform: rotate(360deg);
+                            transform: rotate(360deg);
+                            }
+                }
+                i{
+                font-size: 40px;
+                color: $svetlozlena;
+                }
+            p{
+                font-size: 20px;
+            }
+            }
+    }
+}
+#projekti{
+    background-color: $tamnosiva;
+    width: 100%;
+    padding: 3% 0;
+        h2{
+        @extend #nasl;
+        @include naslovi;
+        }
+        h3{
+            @include naslovi;
+            font-size: 25px;
+        }
+        h4{
+            color: $malosvetlijasiva;
+            font-size: 18px;
+        }
+        #zapr{
+        display: flex;
+        justify-content: space-around;
+            #blokpr{
+                img{
+                    width: 100%;
+                }
+                @include zapr;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    border-bottom: 2px solid $svetlozlena;
+                    color: $malosvetlijasiva;
+                    font-size: 20px;
+                    &:hover .tooltiptext{
+                        visibility: visible;
+                    }
+                    .tooltiptext {
+                        visibility: hidden;
+                        width: 120px;
+                        background-color: $svetlosiva;
+                        color: #fff;
+                        text-align: center;
+                        padding: 5px 0;
+                        border-radius: 6px;
+                        position: absolute;
+                        z-index: 1;
+                        font-size: 15px;
+                      }  
+                }    
+            }
+            #blokpr2{
+                img{
+                    width: 100%;
+                }
+                @include zapr;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .tooltip {
+                    position: relative;
+                    display: inline-block;
+                    border-bottom: 2px solid $svetlozlena;
+                    color: $malosvetlijasiva;
+                    font-size: 20px;    
+                    &:hover .tooltiptext{
+                        visibility: visible;
+                    }
+                    .tooltiptext {
+                        visibility: hidden;
+                        width: 120px;
+                        background-color: $svetlosiva;
+                        color: #fff;
+                        text-align: center;
+                        padding: 5px 0;
+                        border-radius: 6px;
+                        position: absolute;
+                        z-index: 1;
+                        font-size: 15px;
+                      }  
+                }    
+            }
+    }
+}
+#skills{
+    background-color: $svetlosiva;
+    width: 100%;
+    padding: 1% 0%;
+        h2{
+            @include naslovi;
+        }
+        #zaskilove{
+        display: flex;
+        justify-content: space-around;
+            .skilblokovi{
+                width: 45%;
+                background-color: $tamnosiva;
+                padding: 1%;
+                border-radius: 10px;
+                    meter{
+                        width: 100%;
+                        margin-bottom: 0.5%;
+                    }
+                    h4{
+                        @include zaskilove;
+                    }
+            }
+        }
+}
+#contact{
+    background-color: $tamnosiva;
+    width: 100%;
+    padding: 1% 0%;
+      h2{
+        @include naslovi;
+      }
+        hr{
+        border-color: $svetlozlena;
+        background-color: $svetlozlena;
+        width: 2px;
+        }
+        #zaformu{
+        display: flex;
+        justify-content: space-around;
+            #forma{
+                width: 60%;
+                background-color: $svetlosiva;
+                border-radius: 10px;
+                form{
+                    margin: 20px auto;
+                    width: 95%;
+                    height: fit-content;
+                    margin: 10px auto;
+                    padding: 20px;
+                    background-clip: content-box;
+                    float: left;
+                        label{
+                            color: $svetlozlena;
+                        }
+                  ::placeholder{
+                        color: $tamnosiva;
+                    }       
+            }
+            #ime{
+                    width: 100%;
+                    height: 30px;
+                    margin-bottom: 15px;
+                    background-color: $malosvetlijasiva;
+                    border-radius: 10px;
+                   
+            }
+            #prezime{
+                    width: 100%;
+                    height: 30px;
+                    margin-bottom: 15px;
+                    background-color: $malosvetlijasiva;
+                    border-radius: 10px;
+            }
+            #mejl{
+                width: 100%;
+                height: 30px;
+                margin-bottom: 15px;
+                background-color: $malosvetlijasiva;
+                border-radius: 10px;
+        }
+            #pisi{
+                    width: 100%;
+                    height: 150px;
+                    margin-bottom: 19px;
+                    resize: vertical;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    background-color: $malosvetlijasiva;
+                    border-radius: 10px;
+            }
+            form label{
+                    font-size: 25px;
+            }
+            #dugme{
+                    background-color: $tamnosiva;
+                    color: $malosvetlijasiva;
+                    transition: 0.5s;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    border-color: white;
+                    padding: 5px;
+            }
+            #dugme:hover{
+                    background-color: $svetlozlena(4, 87, 4);
+                    color: $svetlozlena;
+                    transition: 0.5s;
+                    border-color: $svetlozlena;
+            }
+            }
+            #info{
+                width: 35%;
+                background-color: $svetlosiva;
+                border-radius: 10px;
+                text-align: center;
+                word-break: break-all;
+                    h3{
+                        @include h3;
+                        margin-top: 3%;
+                    }
+                    #top{
+                                margin-top: 23%;
+                            }
+                    p{
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+            }
+
+        }
+}
+footer{
+   text-align: center;
+   background-color: $tamnosiva;
+    h4{
+        color: $svetlozlena;
+        font-size: 19px;
+        padding: 2%;
+    }
+     #bold{
+        font-weight: bolder;
+        color: $malosvetlijasiva;
+    }
+    #mreze{
+        i{
+            font-size: 30px;
+            color: $svetlozlena;
+            padding: 1.9%;
+            
+                &:hover{
+                    color: $malosvetlijasiva;
+                    -webkit-transition: all 0.6s ease-in-out;
+                    -moz-transition: all 0.6s ease-in-out;
+                    -o-transition: all 0.6s ease-in-out;
+                    -ms-transition: all 0.6s ease-in-out;
+                    transition: all 0.6s ease-in-out;
+                    -webkit-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                    
+                }
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $malosvetlijasiva;
+        font-size: 17px;
+        padding: 0px 5px;
+            &a:hover{
+                color: $svetlozlena;
+            }
+    }
+}
