@@ -1,0 +1,277 @@
+@media screen and (max-width:1025px){
+    header #nav ul li a {
+        font-size: 20px;
+      }
+    #pozadina{
+        height: 50%;
+    }
+    #projekti #zapr #blokpr {
+        padding: 3%;
+    }
+    #projekti #zapr #blokpr2 {
+        padding: 3%;
+    }
+    #contact #zaformu #forma #ime {
+        width: 98%;
+    }
+      
+      #contact #zaformu #forma #prezime {
+        width: 98%;
+      }
+      #contact #zaformu #forma #mejl {
+        width: 98%;
+      }
+      #contact #zaformu #forma #pisi {
+        width: 98%;
+      }
+      #contact #zaformu #info {
+          padding: 5px;
+      }
+}
+@media screen and (max-width:880px){
+    #about #zablokove #slika img {
+        margin-left: 2%;
+      }  
+      #servisi #za3bloka{   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #servisi #za3bloka .sblok {
+        width: 40%;
+        margin: 3px;
+    }
+    #servisi #za3bloka .sblok p {
+      font-size: 13px;
+    }
+    #servisi #za3bloka .sblok h3 {
+      font-size: 19px;
+    }
+}
+@media screen and (max-width:770px){
+    .centerblock{
+        width: 90%;
+    }     
+    header #nav ul li a {
+        font-size: 18px;
+      }
+    #servisi #za3bloka .sblok{
+        margin: 10px;
+      }
+    #pozadina{
+        height: 40%;
+    }
+    #projekti #zapr #blokpr {
+        padding: 3%;
+    }
+    #projekti #zapr #blokpr2 {
+        padding: 3%;
+    }
+    #contact #zaformu .forma #ime {
+        width: 95%;
+    }
+      
+      #contact #zaformu .forma #prezime {
+        width: 95%;
+      }
+      #contact #zaformu .forma #mejl {
+        width: 95%;
+      }
+      #contact #zaformu .forma #pisi {
+        width: 95%;
+      }
+      #contact #zaformu #info {
+          padding: 10px;
+      }
+      #contact #zaformu #info h3 {
+        font-size: 25px;
+    }
+    #contact #zaformu #info p {
+        font-size: 20px;
+    }      
+    #contact #zaformu #info #top{
+        margin-top: 33%;
+    }
+}
+
+
+
+
+@media screen and (max-width:730px){
+    #about #zablokove {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #about #zablokove hr {
+        width: 50%;
+        margin-top: 10px;
+    }
+    #about #zablokove #slika img {
+        width: 60%;
+        margin-left: 80px;
+    }
+    #about #zablokove #tekst{
+        width: 100%;
+    }
+    #about #zablokove #tekst h3{
+        font-size: 20px;
+    }
+    #about #zablokove #tekst p {
+        font-size: 15px;
+      }
+    
+
+}
+@media screen and (max-width:426px){
+    .centerblock{
+        width: 100%;
+    }
+    #about #zablokove {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #about #zablokove #slika img {
+        width: 60%;
+        margin-left: 80px;
+    }
+    #about #zablokove #tekst{
+        width: 100%;
+    }
+    #about #zablokove #tekst h3{
+        font-size: 20px;
+    }
+    #about #zablokove #tekst p {
+        font-size: 15px;
+      }
+      #servisi #za3bloka{   
+          display: flex;
+          flex-wrap: wrap;
+      }
+      #servisi #za3bloka .sblok {
+          width: 40%;
+          margin: 3px;
+      }
+      #servisi #za3bloka .sblok p {
+        font-size: 13px;
+      }
+      #servisi #za3bloka .sblok h3 {
+        font-size: 19px;
+      }
+      #projekti h3 {
+          font-size: 20px;
+      }
+      #projekti h2 {
+        font-size: 14px;
+    }
+    #servisi #nasl, #servisi #projekti h2, #projekti #servisi h2 {
+        font-size: 20px;
+    }
+      #projekti #zapr{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #projekti #zapr #blokpr{
+        width: 70%;
+        margin-bottom: 30px;
+      }
+      #projekti #zapr #blokpr2{
+        width: 70%;
+        margin-bottom: 30px;
+      }
+      #contact hr {
+        border-color: #98e45a;
+        background-color: #98e45a;
+        width: 50%;
+      }
+      #contact #zaformu{
+          display: flex;
+          flex-wrap: wrap;
+      }
+      #contact #zaformu #forma{
+          margin: 10px;
+          width: 100%;
+      }
+      #contact #zaformu #info{
+        margin: 10px;
+        width: 100%;
+      }
+      #contact #zaformu #info h3 {
+          font-size: 20px;
+      }
+      #contact #zaformu #info p {
+          font-size: 15px;
+      }
+      #contact #zaformu #info #top{
+          margin-top: 0%;
+      }
+      footer h4{
+        font-size: 16px;
+      }
+}
+@media screen and (max-width:426px){
+    #servisi #za3bloka .sblok {
+        width: 80%;
+    }
+    #contact #zaformu #forma form{
+        padding-left: 15px;
+        padding-right: 0px;      
+    }
+    #pozadina{
+        height: 23%;
+    }
+    #pozadina h1{
+        font-size: 20px;
+    }
+    #contact #zaformu #forma form{
+        padding-left: 15px;
+    }
+    #about h2{
+        font-size: 20px;
+    }
+    #servisi h2{
+        font-size: 20px
+    }
+    #skills h2{
+        font-size: 20px
+    }
+    #contact #zaformu h2{
+        font-size: 20px
+    }
+    #projekti h2{
+        font-size: 20px
+    }
+    footer h4{
+        font-size: 15px;
+      }
+}
+@media screen and (max-width:376px){
+    #contact #zaformu #forma form{
+        padding-left: 15px;
+        padding-right: 0px;      
+    }
+    #servisi #za3bloka .sblok i {
+        font-size: 25px;
+      }
+      #contact #zaformu #forma form label {
+        font-size: 20px;
+      }
+      footer h4{
+        font-size: 12px;
+      }
+}
+@media screen and (max-width:321px){
+
+    #contact #zaformu #forma form{
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+    #about #zablokove #slika img {
+        margin-left: 60px;
+    }
+    #projekti #zapr #blokpr .tooltip .tooltiptext {
+        margin-left: -20px;
+    }
+    #projekti #zapr #blokpr2 .tooltip .tooltiptext {
+        margin-left: -20px;
+    }
+}
