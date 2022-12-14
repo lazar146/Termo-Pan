@@ -1,4 +1,4 @@
-var ddlNiz = new Array("Class A","Class B"," C")
+var ddlNiz = new Array("Class A","Class B","Class C")
 var dropdawn;
 
 dropdawn = `<select id="ddl">`;
@@ -29,8 +29,8 @@ var Greska = 0;
     provCh = document.getElementsByName("chd");
     provText = document.querySelector("#pisi"); 
 
-      regZaIme = /^[A-Z][a-z]{2,15}(\s[A-Z][a-z]{2,15})?$/;
-      regPrezime = /^[A-Z][a-z]{1,20}(\s[A-Z][a-z]{1,20})?$/;
+      regZaIme = /^[A-ZŠĐŽĆČ][a-zšđžćč]{2,15}(\s[A-ZŠĐŽĆČ][a-zšđžćč]{2,15})?$/;
+      regPrezime = /^[A-ZŠĐŽĆČ][a-zšđžćč]{1,20}(\s[A-ZŠĐŽĆČ][a-zšđžćč]{1,20})?$/;
       regEmail = /^[a-z](([a-z])?([0-9])?){1,13}@(gmail|hotmail)\.com$/;
 
       if(!regZaIme.test(provIme.value)){
@@ -167,12 +167,14 @@ var Greska = 0;
       }
        console.log(Greska)
       if(Greska1 == false && Greska2 == false && Greska3 == false && Greska4 == false && Greska5 == false && Greska6 == false && Greska7 == false && Greska8 == false ){
+       
         document.querySelector("#dugme").nextElementSibling.classList.remove("sakrij");
         document.querySelector("#dugme").nextElementSibling.innerHTML = "All good!";
         document.querySelector("#dugme").classList.add("greska");
         document.querySelector("#prijava").reset()      
       }
       else{
+        
         document.querySelector("#dugme").nextElementSibling.classList.add("sakrij");
         document.querySelector("#dugme").nextElementSibling.innerHTML = "";
       }
@@ -383,7 +385,7 @@ document.querySelector("#skldugme").addEventListener("click",function(){
   var konacna;
   var mZaStaklo;
   mZaStaklo = document.getElementById("glass").value  ;
-  konacna = mZaStaklo*250;
+  konacna = mZaStaklo*250 + "$";
   
 
   document.getElementById("glass").nextElementSibling.innerHTML = konacna;
@@ -405,7 +407,7 @@ var ogledalo = document.querySelector("#skldugme1").addEventListener("click",fun
   var konacna;
   
   mZaOgledalo = document.getElementById("mirror").value  ;
-  konacna = mZaOgledalo*300;
+  konacna = mZaOgledalo*300+ "$";
   
 
   document.getElementById("mirror").nextElementSibling.innerHTML = konacna;
