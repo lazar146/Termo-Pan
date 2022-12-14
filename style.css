@@ -97,7 +97,7 @@ header .menu  li a {
   color: white;
   list-style: none;
   padding-top: 4rem;
-  flex-direction: column ;
+
 }
 .hamburger{
   background-color: #191919;
@@ -110,8 +110,16 @@ header .menu  li a {
   transform: translateY(0);
  
 }
+
+.pokazi{
+  display: block;
+}
+
+.skloni{
+  display: none;
+}
 #pozadina {
-  background-image: url(img/1.jpeg);
+  background-image: url(img/2.jpeg);
   background-repeat: no-repeat;
   height: 70%;
   text-align: center;

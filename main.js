@@ -199,10 +199,14 @@ var menuIcon = document.querySelector(".menuIcon");
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
+    menu.classList.remove("pokazi");
+    menu.classList.add("sakrij");
     closeIcon.style.display = "none";
     menuIcon.style.display = "block";
+    
   } else {
     menu.classList.add("showMenu");
+    menu.classList.add("pokazi");
     closeIcon.style.display = "block";
     menuIcon.style.display = "none";
   }
@@ -361,7 +365,7 @@ $( document ).ready(function(){
 
 })
 var mZaStaklo;
-mZaStaklo = document.querySelector("#glass");
+mZaStaklo = document.getElementById("glass").value;
 var mZaOgledalo = document.querySelector("#mirror");
 
 
