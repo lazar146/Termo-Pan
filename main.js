@@ -186,40 +186,23 @@ var Greska = 0;
       var nizNavHref = new Array("#","#about","#servisi","#skills");
 
       for(let i=0;i<nizNav.length;i++){
-        ispisNav+= `<li><a class="menuItem" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
+        ispisNav+= `<li class="list-item"><a class="nav-link" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
       }
       
-      document.querySelector(".menu").innerHTML = ispisNav;
+     
+      document.querySelector(".nav-sub").innerHTML = ispisNav;
 
-var menu = document.querySelector(".menu");
-var menuItems = document.querySelectorAll(".menuItem");
-var hamburger= document.querySelector(".hamburger");
-var closeIcon= document.querySelector(".closeIcon");
-var menuIcon = document.querySelector(".menuIcon");
-function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    menu.classList.remove("pokazi");
-    menu.classList.add("sakrij");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-    
-  } else {
-    menu.classList.add("showMenu");
-    menu.classList.add("pokazi");
-    menu.classList.remove("sakrij");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-  }
-}
 
-hamburger.addEventListener("click", toggleMenu);
+      const hamburger = document.querySelector(".ham");
+      const navsub = document.querySelector(".nav-sub");
+      hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle("change")
+      navsub.classList.toggle("nav-change")
+      });
 
-menuItems.forEach( 
-  function(menuItem) { 
-    menuItem.addEventListener("click", toggleMenu);
-  }
-)
+
+
+
 
 var rotate = false;
 function setbackground(){
