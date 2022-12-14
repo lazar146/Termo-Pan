@@ -1,8 +1,8 @@
-var ddlNiz = new Array("Klasa A","Klasa B","Klasa C")
+var ddlNiz = new Array("Class A","Class B"," C")
 var dropdawn;
 
 dropdawn = `<select id="ddl">`;
-dropdawn+=`<option value=0>Izaberi klasu:</option>`
+dropdawn+=`<option value=0>Choose class:</option>`
 var broj=1;
 for(let i=0;i<ddlNiz.length;i++){
   
@@ -39,13 +39,13 @@ var Greska = 0;
         provIme.nextElementSibling.classList.remove("sakrij");
         provIme.nextElementSibling.innerHTML = "The name is wrong. Example: Michael";
         provIme.classList.add("greska");
-        Greska=true;
+        Greska5=true;
       }
       else{
         provIme.nextElementSibling.classList.add("sakrij");
         provIme.nextElementSibling.innerHTML = "";
         provIme.classList.remove("greska");
-        Greska=false;
+        Greska5=false;
       }
 
 
@@ -55,13 +55,13 @@ var Greska = 0;
         provPrezime.nextElementSibling.classList.remove("sakrij");
         provPrezime.nextElementSibling.innerHTML = "The last name is wrong. Example: De Santa";
         provPrezime.classList.add("greska");
-        Greska=true;
+        Greska6=true;
       }
       else{
         provPrezime.nextElementSibling.classList.add("sakrij");
         provPrezime.nextElementSibling.innerHTML = "";
         provPrezime.classList.remove("greska");
-        Greska=false;
+        Greska6=false;
       }
 
 
@@ -69,13 +69,13 @@ var Greska = 0;
         provEmail.nextElementSibling.classList.remove("sakrij");
         provEmail.nextElementSibling.innerHTML = "The email is wrong. Example: example@gmail.com";
         provEmail.classList.add("greska");
-        Greska=true;;
+        Greska7=true;;
       }
       else{
         provEmail.nextElementSibling.classList.add("sakrij");
         provEmail.nextElementSibling.innerHTML = "";
         provEmail.classList.remove("greska");
-        Greska=false;
+        Greska7=false;
       }
 
       let ddlVrednost = provDdl.options[provDdl.selectedIndex].value;
@@ -85,13 +85,13 @@ var Greska = 0;
         provDdl.parentElement.nextElementSibling.classList.remove("sakrij");
         provDdl.parentElement.nextElementSibling.innerHTML = "You need to choose a class";
         provDdl.classList.add("greska");
-        Greska=true;
+        Greska8=true;
       }
       else{
         provDdl.parentElement.nextElementSibling.classList.add("sakrij");
         provDdl.parentElement.nextElementSibling.classList.innerHTML = "";
         provDdl.classList.remove("greska");
-        Greska=false;
+        Greska8=false;
       }
 
       let usluga = "";
@@ -109,18 +109,18 @@ var Greska = 0;
               ch += provCh[i].value + " ";
           }
       }
-
+      var greska1,greska2,greska3,greska4,greska5,greska6,greksa7,greska8
       if(ddlVrednost == "0"){
         provDdl.parentElement.nextElementSibling.classList.remove("sakrij");
         provDdl.parentElement.nextElementSibling.innerHTML = "You need to choose a class";
         provDdl.classList.add("greska");
-        Greska=true;
+        Greska1=true;
       }
       else{
         provDdl.parentElement.nextElementSibling.classList.add("sakrij");
         provDdl.parentElement.nextElementSibling.classList.innerHTML = "";
         provDdl.classList.remove("greska");
-        Greska=false;
+        Greska1=false;
       }
 
 
@@ -134,41 +134,41 @@ var Greska = 0;
         provRad[0].parentElement.parentElement.nextElementSibling.classList.remove("sakrij");
         provRad[0].parentElement.parentElement.nextElementSibling.innerHTML = "You need to check one";
         provRad[0].parentElement.parentElement.classList.add("greska");
-        Greska=true;
+        Greska2=true;
       }
       else{
         provRad[0].parentElement.parentElement.nextElementSibling.classList.add("sakrij");
         provRad[0].parentElement.parentElement.nextElementSibling.classList.innerHTML = "";
         provRad[0].parentElement.parentElement.classList.remove("greska");
-        Greska=false;
+        Greska2=false;
       }
 
       if(ch == ""){
         provCh[0].parentElement.parentElement.nextElementSibling.classList.remove("sakrij");
         provCh[0].parentElement.parentElement.nextElementSibling.innerHTML = "You need to check one";
         provCh[0].parentElement.parentElement.classList.add("greska");
-        Greska=true;
+        Greska3=true;
       }
       else{
         provCh[0].parentElement.parentElement.nextElementSibling.classList.add("sakrij");
         provCh[0].parentElement.parentElement.nextElementSibling.classList.innerHTML = "";
         provCh[0].parentElement.parentElement.classList.remove("greska");
-        Greska=false;
+        Greska3=false;
       }
        if(provText.value.length <25){
         provText.nextElementSibling.classList.remove("sakrij");
         provText.nextElementSibling.innerHTML = "You need atleast 25 characters to enter";
         provText.classList.add("greska");
-        Greska=true;
+        Greska4=true;
       }
       else{
         provText.nextElementSibling.classList.add("sakrij");
         provText.nextElementSibling.innerHTML = "";
         provText.classList.remove("greska");
-        Greska=false;
+        Greska4=false;
       }
        console.log(Greska)
-      if(Greska == 0){
+      if(Greska1 == false && Greksa2 == false && Greksa3 == false && Greksa4 == false && Greksa5 == false && Greksa6 == false && Greksa7 == false && Greksa8 == false ){
         document.querySelector("#dugme").nextElementSibling.classList.remove("sakrij");
         document.querySelector("#dugme").nextElementSibling.innerHTML = "All good!";
         document.querySelector("#dugme").classList.add("greska");
@@ -182,8 +182,8 @@ var Greska = 0;
 
 
       var ispisNav = "";
-      var nizNav = new Array("Link 1","Link 2","Link 3","Link 4");
-      var nizNavHref = new Array("#","#about","#servisi","#skills");
+      var nizNav = new Array("About Company","Services","Workers","Prices","Contact","link 6");
+      var nizNavHref = new Array("#about","#servisi","#skills","#projekti","#contact","#aboutme");
 
       for(let i=0;i<nizNav.length;i++){
         ispisNav+= `<li class="list-item"><a class="nav-link" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
@@ -194,11 +194,11 @@ var Greska = 0;
 
 
       const hamburger = document.querySelector(".ham");
-      const navsub = document.querySelector(".nav-sub");
-      hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle("change")
-      navsub.classList.toggle("nav-change")
-      });
+const navsub = document.querySelector(".nav-sub");
+hamburger.addEventListener('click', () => {
+hamburger.classList.toggle("change")
+navsub.classList.toggle("nav-change")
+});
 
 
 
@@ -348,25 +348,50 @@ $( document ).ready(function(){
  })
 
 })
-var mZaStaklo;
-mZaStaklo = document.getElementById("glass").value;
-var mZaOgledalo = document.querySelector("#mirror");
 
 
-var staklo = document.querySelector("#skldugme").addEventListener("click",izracunajStaklo());
-var ogledalo = document.querySelector("#skldugme1").addEventListener("click",izracunajOgledalo());
 
-console.log(mZaStaklo)
-function izracunajStaklo(){
+
+document.querySelector("#skldugme").addEventListener("click",function(){
   var konacna;
+  var mZaStaklo;
+  mZaStaklo = document.getElementById("glass").value  ;
   konacna = mZaStaklo*250;
   
+
+  document.getElementById("glass").nextElementSibling.innerHTML = konacna;
+  document.getElementById("glass").nextElementSibling.classList.remove("sakrij");
   console.log(konacna)
+  console.log(mZaStaklo)
+
+
+
+});
+
+
+
+
+
+
+
+var ogledalo = document.querySelector("#skldugme1").addEventListener("click",function(){
+  var konacna;
   
-}
+  mZaOgledalo = document.getElementById("mirror").value  ;
+  konacna = mZaOgledalo*300;
+  
+
+  document.getElementById("mirror").nextElementSibling.innerHTML = konacna;
+  document.getElementById("mirror").nextElementSibling.classList.remove("sakrij");
+  
+});
+
+
+
+
 function izracunajOgledalo(){
   var konacna;
-  konacna = mZaStaklo*250;
+  konacna = 2;  
   
   
   
