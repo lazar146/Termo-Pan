@@ -27,11 +27,11 @@ var Greska = 0;
     provDdl = document.querySelector("#ddl");
     provRad = document.getElementsByName("Rb1");
     provCh = document.getElementsByName("chd");
-    provText = document.querySelector("#pisi");
+    provText = document.querySelector("#pisi"); 
 
-      regZaIme = /^([A-Z][a-z]{2,10})+$/
-      regPrezime = /^([A-Z][a-z]{2,14}){2}$/
-      regEmail = /(([a-z])([0-9])){1,8}@gmail\.com$/
+      regZaIme = /^[A-Z][a-z]{2,15}(\s[A-Z][a-z]{2,15})?$/;
+      regPrezime = /^[A-Z][a-z]{1,20}(\s[A-Z][a-z]{1,20})?$/;
+      regEmail = /^[a-z](([a-z])?([0-9])?){1,13}@(gmail|hotmail)\.com$/;
 
       if(!regZaIme.test(provIme.value)){
         provIme.nextElementSibling.classList.remove("sakrij");
@@ -51,7 +51,7 @@ var Greska = 0;
 
       if(!regZaIme.test(provPrezime.value)){
         provPrezime.nextElementSibling.classList.remove("sakrij");
-        provPrezime.nextElementSibling.innerHTML = "The last name is wrong. Example: De Santa";
+        provPrezime.nextElementSibling.innerHTML = "The last name is wrong. Example: Dee Santa";
         provPrezime.classList.add("greska");
         Greska6=true;
       }
@@ -166,21 +166,43 @@ var Greska = 0;
         Greska4=false;
       }
        console.log(Greska)
-      if(Greska1 == false && Greksa2 == false && Greksa3 == false && Greksa4 == false && Greksa5 == false && Greksa6 == false && Greksa7 == false && Greksa8 == false ){
+      if(Greska1 == false && Greska2 == false && Greska3 == false && Greska4 == false && Greska5 == false && Greska6 == false && Greska7 == false && Greska8 == false ){
         document.querySelector("#dugme").nextElementSibling.classList.remove("sakrij");
         document.querySelector("#dugme").nextElementSibling.innerHTML = "All good!";
         document.querySelector("#dugme").classList.add("greska");
-        
+        document.querySelector("#prijava").reset()      
+      }
+      else{
+        document.querySelector("#dugme").nextElementSibling.classList.add("sakrij");
+        document.querySelector("#dugme").nextElementSibling.innerHTML = "";
       }
 
-
 }
+document.querySelector("#pisi").addEventListener("keyup",function(){
+
+  var vrednostp=document.querySelector("#pisi");
+  var brojkaraktera=vrednostp.value;
+  var sadduzinaje = brojkaraktera.length;
+
+  console.log(brojkaraktera);
+
+
+  if(sadduzinaje<=200){
+      
+      var smanji=200-sadduzinaje;
+      document.querySelector("#brojkar").innerHTML = "Left characters to go:"+" "+smanji;
+  }
+  else{
+      vrednostp.value= brojkaraktera.substring(0,200);
+      
+  }
+});
 
       //nav
 
 
       var ispisNav = "";
-      var nizNav = new Array("About Company","Services","Workers","Prices","Contact","Autor");
+      var nizNav = new Array("About Company","Services","Prices","Workers","Contact","Autor");
       var nizNavHref = new Array("#about","#servisi","#skills","#projekti","#contact","ja.html");
 
       for(let i=0;i<nizNav.length;i++){
