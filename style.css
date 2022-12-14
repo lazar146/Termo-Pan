@@ -284,7 +284,17 @@ ul li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-
+.sblok1{
+  padding: 1%;
+  text-align: center;
+  width: 30%;
+  background-color: #191919;
+  word-break: break-all;
+  border-radius: 10px;
+}
+.sblok1 img{
+width: 100%;
+}
 #servisi #za3bloka .sblok {
   padding: 1%;
   text-align: center;

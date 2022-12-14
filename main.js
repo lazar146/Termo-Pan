@@ -182,8 +182,8 @@ var Greska = 0;
 
 
       var ispisNav = "";
-      var nizNav = new Array("About Company","Services","Workers","Prices","Contact","link 6");
-      var nizNavHref = new Array("#about","#servisi","#skills","#projekti","#contact","#aboutme");
+      var nizNav = new Array("About Company","Services","Workers","Prices","Contact","Autor");
+      var nizNavHref = new Array("#about","#servisi","#skills","#projekti","#contact","ja.html");
 
       for(let i=0;i<nizNav.length;i++){
         ispisNav+= `<li class="list-item"><a class="nav-link" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
