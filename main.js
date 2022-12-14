@@ -207,6 +207,7 @@ function toggleMenu() {
   } else {
     menu.classList.add("showMenu");
     menu.classList.add("pokazi");
+    menu.classList.remove("sakrij");
     closeIcon.style.display = "block";
     menuIcon.style.display = "none";
   }
