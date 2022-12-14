@@ -121,13 +121,6 @@ var Greska = 0;
         Greska1=false;
       }
 
-
-
-
-
-
-
-
       if(usluga == ""){
         provRad[0].parentElement.parentElement.nextElementSibling.classList.remove("sakrij");
         provRad[0].parentElement.parentElement.nextElementSibling.innerHTML = "You need to check one";
