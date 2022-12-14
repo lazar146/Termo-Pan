@@ -13,8 +13,6 @@ dropdawn+=`</select>`
 document.querySelector("#dp").innerHTML = dropdawn;
 
 
-
-
 var Greska = 0;
 
     let klik = document.querySelector("#dugme");
@@ -186,22 +184,29 @@ var Greska = 0;
       var nizNavHref = new Array("#about","#servisi","#skills","#projekti","#contact","ja.html");
 
       for(let i=0;i<nizNav.length;i++){
-        ispisNav+= `<li class="list-item"><a class="nav-link" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
+        ispisNav+= `<li class="nav-item"><a class="nav-link" href=${nizNavHref[i]}>${nizNav[i]}</a></li>`
       }
       
      
-      document.querySelector(".nav-sub").innerHTML = ispisNav;
+      document.querySelector(".nav-menu").innerHTML = ispisNav;
 
+      var hamburger = document.querySelector(".hamburger");
+      var navMenu = document.querySelector(".nav-menu");
 
-      const hamburger = document.querySelector(".ham");
-const navsub = document.querySelector(".nav-sub");
-hamburger.addEventListener('click', () => {
-hamburger.classList.toggle("change")
-navsub.classList.toggle("nav-change")
-});
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      })
 
-
-
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }))
+    
+      window.addEventListener("scroll", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      })
 
 
 var rotate = false;

@@ -27,74 +27,54 @@ body::-webkit-scrollbar-track {
 body {
   font-family: 'Nunito', sans-serif;
 }
-
+header{
+  background-color: #99e1e4;
+}
+header li{
+  list-style: none;
+}
+header a{
+  color: #191919;
+  text-decoration: none;
+}
 .centerblock {
   width: 80%;
   margin: 0px auto;
 }
-
-header {
-  background-color: #99e1e4;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
-.title{
-  cursor:pointer;
-  font-size: 20px;
-  color: #191919;
-  font-weight: bold;
-  
-  }
-
-  .title a{
-    list-style:none;
-  text-decoration:none;
-  color: #191919;
-  }
-  /*Properties for Nav-bar*/
-  .navbar{
-  display:flex;
-  top:0;
-  height:10vh;
-  justify-content:space-between;
-  align-items:center;
-  padding:0px 20px;
-  background:#99e1e4;
-  }
-
-  .nav-sub{
-    display:flex;
-    justify-content:space-between;
-    background-color: #99e1e4;
-    }
-    .list-item {
-    padding:10px;
-    list-style:none;
-    
-    }
-    .nav-link{
-    color:#191919;
-    text-decoration:none;
-    font-weight: bold;
-    }
-
-    .ham{
-      display:none;
-      padding:5px;
-      cursor:pointer;
-      }
-      .bar1,.bar2,.bar3{
-      display:block;
-      width:35px;
-      height:3px;
-      margin:5px auto;
-      background-color:#101010;
-      transition: 0.4s;
-      }
+.nav-branding{
+  font-size: 2rem;
+}
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.nav-link{
+  transition: 0.3s ease-out;
+}
+.nav-link:hover{
+  color: dodgerblue;
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+}
 
 
 
