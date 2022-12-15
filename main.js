@@ -418,4 +418,29 @@ function izracunajOgledalo(){
   
   
 }
+
+var ispisSBlock = "";
+      var nizSBlokClass = new Array("sblok","sblok","sblok");
+      var nizSBlokiClass = new Array("fa fa-window-restore","fa fa-window-maximize","fa fa-glass");
+      var nizSBlokh3 = new Array("Window insertion","Mirrors","Glass Objects");
+      var nizSBlokp = new Array(
+      "One of ours services is inserting windows in yours house or any places you like to be, it can be custom windows or default windows we default have.",
+      "We have 33 years of experience in the glass industry! Our mission is to provide you with high quality glass products, unparalleled service, and workmanship!",
+      "These are commonly found on walls, floors, and even home decorations. Similarly, some artists have used it to adorn tableware or pottery with intricate designs."
+      );
+
+      for(let i=0;i<nizSBlokp.length;i++){
+        ispisSBlock+= `<div class="${nizSBlokClass[i]}">
+                      <i class="${nizSBlokiClass[i]}"></i>
+                      <h3>${nizSBlokh3[i]}</h3>
+                      <p>${nizSBlokp[i]}</p>
+                      </div>`
+      }
+      
+     
+      document.querySelector("#za3bloka").innerHTML = ispisSBlock;
+
+
+
+
     
